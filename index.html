@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вселенные Человека-Паука</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SPIDER-MAN</div>
+        <nav>
+            <button class="nav-btn" onclick="switchUniverse('tobey')">Тоби Магуайр</button>
+            <button class="nav-btn" onclick="switchUniverse('andrew')">Эндрю Гарфилд</button>
+            <button class="nav-btn" onclick="switchUniverse('tom')">Том Холланд</button>
+    
+        </nav>
+    </header>
+
+    <main>
+        <div class="universe-hero">
+            <h1 id="uni-title">Загрузка...</h1>
+            <div class="actor"><b>Актер:</b> <span id="uni-actor">...</span></div>
+            <p id="uni-desc">...</p>
+        </div>
+
+        <h2 class="section-title">Силы и Способности</h2>
+        <div class="grid-container" id="powers-container"></div>
+
+        <h2 class="section-title">Главные Злодеи</h2>
+        <div class="grid-container" id="villains-container"></div>
+
+        <h2 class="section-title">Факты об Вселенной</h2>
+        <ul class="features-list" id="features-container"></ul>
+
+        <h2 class="section-title">Мини-игра: Поймай Паутину</h2>
+        <div class="game-wrapper">
+            <div class="game-info">
+                <div>Счет: <span id="game-score">0</span></div>
+                <button id="start-game-btn" onclick="startGame()">Начать игру</button>
+            </div>
+            <div id="game-zone"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Мультивселенная Человека-Паука. Алтай Сапаров</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

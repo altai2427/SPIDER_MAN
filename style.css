@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f111a;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(135deg, #111, #1a1c2e);
+    border-bottom: 3px solid var(--theme-color, #b11313);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: border-color 0.3s ease;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--theme-color, #b11313);
+    transition: text-shadow 0.3s ease;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn {
+    background: transparent;
+    color: #aaa;
+    border: 2px solid transparent;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.nav-btn:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-btn.active {
+    color: #fff;
+    background-color: var(--theme-color, #b11313);
+    border-color: var(--theme-color, #b11313);
+    box-shadow: 0 0 15px var(--theme-color, rgba(177, 19, 19, 0.6));
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.universe-hero {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--theme-color, #b11313);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+}
+
+.universe-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--theme-color, #b11313);
+    transition: color 0.3s ease;
+}
+
+.actor {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+}
+
+.desc {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1.2rem;
+    border-bottom: 2px solid #25293a;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #eee;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #161925;
+    border: 1px solid #25293a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-color: var(--theme-color, #b11313);
+}
+
+.card h3 {
+    margin-bottom: 0.7rem;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    background: #161925;
+    margin-bottom: 0.8rem;
+    padding: 1.2rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--theme-color, #b11313);
+    font-size: 1.05rem;
+    color: #e0e0e0;
+}
+
+footer {
+    background: #090a10;
+    text-align: center;
+    padding: 1.5rem;
+    color: #555;
+    font-size: 0.9rem;
+    border-top: 1px solid #111;
+    margin-top: 3rem;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#start-game-btn {
+    background: var(--theme-color, #b11313);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#game-zone {
+    width: 100%;
+    height: 300px;
+    background: #0b0c10;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.web-drop {
+    position: absolute;
+    cursor: pointer;
+    font-size: 32px;
+    user-select: none;
+    animation: fall 2.5s linear forwards;
+}
+
+@keyframes fall {
+    0% { top: -50px; }
+    100% { top: 310px; }
+}
+.secret-item {
+    background: #161925;
+    border: 1px solid #25293a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--theme-color, #8a2be2);
+}
+
+.secret-item h2 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.secret-theme {
+    color: var(--theme-color, #8a2be2);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.secret-item p {
+    color: #ccc;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
